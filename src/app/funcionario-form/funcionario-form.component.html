@@ -1,0 +1,16 @@
+<h3> Meu nome é {{ nome }} </h3>
+    <div class="alert alert-success" role="alert" [hidden]="!adicionado" >
+        Funcionário adicionado: <strong>{{ nome }}</strong>
+    </div>
+
+    <div class="form-group">
+        <label>Nome</label>
+        <input type="text" class="form-control" [(ngModel)]="nome"
+        (focus)="adicionado = false" [appCampoColorido]="'yellow'"/>
+    </div>
+
+    <!-- interage comfuncionario-form.component.ts, chamando o método adicionar-->
+    <button type="button" class="btn btn-primary" (click)="adicionar()"
+     [disabled]="nome.length == 0">Adicionar</button>
+
+
