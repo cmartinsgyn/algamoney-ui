@@ -1,22 +1,30 @@
 <div class="container">
-<app-menu>menu</app-menu>
-<br>
-<app-botao-grande label="uso alem do menu">botao</app-botao-grande>
+
+    <app-funcionario-aula-servico></app-funcionario-aula-servico>
+
+    <div class="row" style="margin-top: 20px">
+        <div class="col-2" *ngFor="let f of funcionarios" >
+            <app-funcionario-card [func] = "f"></app-funcionario-card>
+        </div>
+    </div>
 
 
   <!--
-<app-botao-grande label="App"></app-botao-grande>
-  <app-funcionario-form (funcionarioAdicionado)="aoAdicionar($event)"></app-funcionario-form>
 
+
+  <app-menu>menu</app-menu>
+  <br>
+  <app-botao-grande label="uso alem do menu">botao</app-botao-grande>
+
+
+
+  <app-funcionario-form (funcionarioAdicionado)="aoAdicionar($event)"></app-funcionario-form>
   <button type="button" class="btn btn-danger" (click)="limpar()">Limpar</button>
 
-  <div class="row" style="margin-top: 20px">
 
-      <div class="col-2" *ngFor="let f of funcionarios" >
-          <app-funcionario-card [func] = "f"></app-funcionario-card>
-      </div>
-    </div>
+
   -->
+
 
 </div>
 

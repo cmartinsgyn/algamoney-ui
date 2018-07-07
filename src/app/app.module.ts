@@ -8,13 +8,15 @@ import { CampoColoridoDirective } from './campo-colorido.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import { FuncionarioAulaServicoComponent } from './funcionario-aula-servico/funcionario-aula-servico.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FuncionarioCardComponent,
     FuncionarioFormComponent,
-    CampoColoridoDirective
+    CampoColoridoDirective,
+    FuncionarioAulaServicoComponent
   ],
   imports: [
     BrowserModule,

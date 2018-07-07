@@ -1,18 +1,22 @@
-import { Component, Output } from '@angular/core';
+import { FuncionarioService } from './funcionario.service';
+import { Component, Output, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   funcionarios = [];
+  funcionarioService: FuncionarioService;
 
-  aoAdicionar(funcionario) {
-    this.funcionarios.push(funcionario);
-  }
-  limpar() {
-    this.funcionarios = [];
-  }
+  constructor() {
+   this.funcionarioService = new FuncionarioService();
+
+ }
+
+ ngOnInit() {
+  this.funcionarios = this.funcionarioService.consultar();
+ }
 
 }
