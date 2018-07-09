@@ -11,6 +11,12 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import { FuncionarioAulaServicoComponent } from './funcionario-aula-servico/funcionario-aula-servico.component';
 
+
+const criarFuncionarioService = () => {
+  return new FuncionarioAbreviadoService(5);
+};
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,8 +31,11 @@ import { FuncionarioAulaServicoComponent } from './funcionario-aula-servico/func
     NavegacaoModule
   ],
   providers: [
-    { provide: FuncionarioService, useClass: FuncionarioAbreviadoService }
+    { provide: FuncionarioService, useFactory: criarFuncionarioService }
     ],
   bootstrap: [AppComponent]
 })
-export class AppModule {  }
+export class AppModule {
+  // provide: FuncionarioService, useClass: FuncionarioAbreviadoService
+
+ }
