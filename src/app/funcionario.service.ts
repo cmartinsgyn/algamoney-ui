@@ -1,9 +1,9 @@
 export class FuncionarioService {
 
 ultimoId = 1;
-funcionarios = [{ id: 1, nome: 'João' }];
+funcionarios = [{ id: 1, nome: 'Maria' }];
 
-adicionar(nome) {
+adicionar(nome: string) {
  const funcionario = {
    id: ++this.ultimoId,
    nome: nome
@@ -19,3 +19,8 @@ consultar() {
 
 }
 
+export class FuncionarioAbreviadoService extends FuncionarioService {
+  adicionar(nome: string) {
+    super.adicionar(nome.substr(0, 3) + '...');
+  }
+}

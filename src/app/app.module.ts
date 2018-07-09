@@ -1,3 +1,4 @@
+import { FuncionarioService, FuncionarioAbreviadoService } from './funcionario.service';
 import { BotoesModule } from './botoes/botoes.module';
 import { NavegacaoModule } from './navegacao/navegacao.module';
 import { AppComponent } from './app.component';
@@ -23,7 +24,9 @@ import { FuncionarioAulaServicoComponent } from './funcionario-aula-servico/func
     FormsModule,
     NavegacaoModule
   ],
-  providers: [],
+  providers: [
+    { provide: FuncionarioService, useClass: FuncionarioAbreviadoService }
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule {  }
