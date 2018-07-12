@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-funcionario-aula-servico',
   templateUrl: './funcionario-aula-servico.component.html',
   styleUrls: ['./funcionario-aula-servico.component.css'],
-  })
+  // providers: [FuncionarioService]
+})
 export class FuncionarioAulaServicoComponent {
 
   constructor(private funcionarioService: FuncionarioService) {}
