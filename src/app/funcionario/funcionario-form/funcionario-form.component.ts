@@ -1,4 +1,4 @@
-import { FuncionarioService } from './../funcionario.service';
+import { FuncionarioService } from '../funcionario.service';
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
