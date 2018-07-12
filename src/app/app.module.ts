@@ -1,5 +1,3 @@
-import { LogService } from './log.service';
-
 import { BotoesModule } from './botoes/botoes.module';
 import { NavegacaoModule } from './navegacao/navegacao.module';
 import { AppComponent } from './app.component';
@@ -12,6 +10,7 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import { FuncionarioAulaServicoComponent } from './funcionario-aula-servico/funcionario-aula-servico.component';
 import { FuncionarioService } from './funcionario.service';
+import { LogService } from './log.service';
 
 
 // const criarFuncionarioService = () => {
@@ -34,8 +33,7 @@ import { FuncionarioService } from './funcionario.service';
   ],
   providers: [
      FuncionarioService,
-     LogService,
-     { provide: 'LogPrefixo', useValue: 'LOG'}
+     LogService
     ],
   bootstrap: [AppComponent]
 })
@@ -45,4 +43,6 @@ export class AppModule {
 
  // provide: FuncionarioService, useClass: FuncionarioAbreviadoService
 //  provide: FuncionarioService, useFactory: criarFuncionarioService
+// FuncionarioService,
+//      LogService, { provide: 'LogPrefixo', useValue: 'LOG'}
 
